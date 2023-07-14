@@ -6,7 +6,6 @@ variable "password" {}
 variable "url" {}
 variable "subscription_id" {}
 
-
 variable "tenant_name" {
   default = "dc1"
 }
@@ -19,10 +18,6 @@ variable "vnet_aks_name" {
 
 variable "aks_ap" {
   default = "aks-ap"
-}
-
-variable "aks_epg" {
-  default = "aks-epg"
 }
 
 variable "aks_epg_selector" {

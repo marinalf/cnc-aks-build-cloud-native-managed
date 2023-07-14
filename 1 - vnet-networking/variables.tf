@@ -6,8 +6,6 @@ variable "password" {}
 variable "url" {}
 variable "subscription_id" {}
 
-# Spoke VNet variables
-
 variable "tenant_name" {
   default = "dc1"
 }
