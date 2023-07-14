@@ -13,3 +13,9 @@ variable "client_secret" {
 variable "tenant_id" {
   default = "any"
 }
+
+variable "msi_id" {
+  type        = string
+  description = "The Managed Service Identity ID. Set this value if you're running this example using Managed Identity as the authentication method."
+  default     = null
+}
