@@ -50,3 +50,7 @@ variable "internet_selector_subnet" {
 variable "internet_contract" {
   default = "aks-internet-access"
 }
+
+variable "aks_filter_name" {
+  default = "internet-to-aks"
+}  

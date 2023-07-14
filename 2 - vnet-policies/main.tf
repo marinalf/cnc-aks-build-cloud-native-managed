@@ -5,7 +5,7 @@ resource "aci_cloud_applicationcontainer" "aks_ap" {
   name      = var.aks_ap
 }
 
-# Service EPG needs to be created via GUI or REST
+# Service EPG needs to be created via GUI or REST APIs
 ## https://github.com/CiscoDevNet/terraform-provider-aci/issues/1078
 
 # Cloud External EPG for Internet Access
@@ -35,5 +35,19 @@ resource "aci_contract" "internet_access" {
 resource "aci_contract_subject" "internet_access" {
   contract_dn                  = aci_contract.internet_access.id
   name                         = "internet-access"
-  relation_vz_rs_subj_filt_att = [data.aci_filter.default_filter.id]
+  relation_vz_rs_subj_filt_att = [aci_filter.internet_to_aks.id]
+}
+
+resource "aci_filter" "internet_to_aks" {
+  tenant_dn = data.aci_tenant.tenant1.id
+  name      = var.aks_filter_name
+}
+
+resource "aci_filter_entry" "http" {
+  name        = "http"
+  filter_dn   = aci_filter.internet_to_aks.id
+  ether_t     = "ip"
+  prot        = "tcp"
+  d_from_port = "80"
+  d_to_port   = "80"
 }

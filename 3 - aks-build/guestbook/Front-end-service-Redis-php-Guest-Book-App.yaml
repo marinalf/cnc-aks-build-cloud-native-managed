@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: LoadBalancer #For external public IP assigment
+  selector:
+    app: guestbook
+    tier: front-end
+  ports:
+    - port: 80
+      targetPort: 80
