@@ -1,6 +1,6 @@
 ### About <a name = "about"></a>
 
-This is a sample code to automate networking and policies for AKS through [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model with Terraform.
+This is a sample terraform code to automate networking and policies for AKS through [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model.
 
 ### Prerequisites
 
@@ -22,12 +22,13 @@ This is a sample code to automate networking and policies for AKS through [Cloud
 
 ### Verify AKS Cluster Status
 
-Once deployed, verify status.
+Once deployed, verify nodes are up
 
 ```
 az aks get-credentials --resource-group <rg-name> --name <aks-cluster-name> --admin
 kubectl get nodes -o wide
 ```
-### Deploy Sample App
+### Deploy Sample App and Enable Internet Access
 
 1. Deploy sample app **(3 - aks-build/guestbook-app)**
+2. Associate Service EPG representing AKS as provider in the internet-access contract
