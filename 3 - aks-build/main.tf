@@ -1,4 +1,4 @@
-# Create an AKS cluster
+# Create AKS cluster
 
 resource "azurerm_kubernetes_cluster" "aks_cluster" {
   name                = "my-aks"

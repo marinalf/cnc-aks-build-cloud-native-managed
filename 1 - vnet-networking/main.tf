@@ -5,7 +5,7 @@ resource "aci_vrf" "vnet_aks" {
   name      = var.vnet_aks_name
 }
 
-# Cloud Context Profile for VNet1 + Subnets
+# Cloud Context Profile for AKS VNet + Subnets
 
 resource "aci_cloud_context_profile" "ctx_vnet_aks" {
   tenant_dn                = data.aci_tenant.tenant1.id

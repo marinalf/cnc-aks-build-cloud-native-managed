@@ -1,5 +1,3 @@
-## AKS VNet Policies
-
 # Application Profile for Service EPG
 
 resource "aci_cloud_applicationcontainer" "aks_ap" {
