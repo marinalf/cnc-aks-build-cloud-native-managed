@@ -3,32 +3,32 @@
 1. Create Backend Master deployment
 
 ```
-kubectl apply -f Back-end-Deploy-Redis-Master-Guest-Book-App.yaml
+kubectl apply -f backend-deploy-redis-master.yaml
 ```
 2. Create Backend  Master service 
 
 ```
-kubectl apply -f Back-end-service-Redis-Master-Guest-Book-App.yaml
+kubectl apply -f backend-service-redis-master.yaml
 ```
-3. Create Backend slave deployment
+3. Create Backend replica deployment
 
 ```
-kubectl apply -f Back-end-Deploy-Redis-slave-Guest-Book-App.yaml
+kubectl apply -f backend-deploy-redis-replica.yaml
 ```
-4. Create Backend slave service 
+4. Create Backend replica service 
 
 ```
- kubectl apply -f Back-end-service-Redis-slave-Guest-Book-App.yaml
+ kubectl apply -f backend-service-redis-replica.yaml
 ```
 5. Create frontend deployment
 
 ```
- kubectl apply -f Front-end-Deploy-Redis-php-Guest-Book-App.yaml 
+ kubectl apply -f frontend-deploy-php-redis.yaml
 ```
-6. Create front-end-service 
+6. Create frontend service 
 
 ```
-kubectl apply -f Front-end-service-Redis-php-Guest-Book-App.yaml
+kubectl apply -f frontend-service-php-redis.yaml
 ```
 7. Verification Commands
 
