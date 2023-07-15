@@ -1,39 +1,13 @@
-## Deploy one at a time, or use "kubectl apply -f ." to deploy all
+Source: https://cloud.google.com/kubernetes-engine/docs/tutorials/guestbook
 
-1. Create Backend Master deployment
+## High Level Steps
 
-```
-kubectl apply -f backend-deploy-redis-master.yaml
-```
-2. Create Backend  Master service 
+Deploy one .yaml file at a time, or use "kubectl apply -f ." to deploy all
 
 ```
-kubectl apply -f backend-service-redis-master.yaml
-```
-3. Create Backend replica deployment
-
-```
-kubectl apply -f backend-deploy-redis-replica.yaml
-```
-4. Create Backend replica service 
-
-```
- kubectl apply -f backend-service-redis-replica.yaml
-```
-5. Create frontend deployment
-
-```
- kubectl apply -f frontend-deploy-php-redis.yaml
-```
-6. Create frontend service 
-
-```
-kubectl apply -f frontend-service-php-redis.yaml
-```
-7. Verification Commands
-
-```
+kubectl apply -f <.yaml>
+kubectl get service (gather external IP for testing)
 kubectl get deploy
 kubectl get pods 
-kubectl get service
 kubectl exec <frontend-name> -- curl http://localhost
+``````
