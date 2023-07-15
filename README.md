@@ -1,6 +1,6 @@
 ### About <a name = "about"></a>
 
-This is a sample terraform code to automate networking and policies for AKS through [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model.
+This is a sample terraform code to automate networking and policies for AKS with [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model.
 
 ### Prerequisites
 
