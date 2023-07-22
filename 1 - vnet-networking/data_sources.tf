@@ -1,6 +1,6 @@
 
 data "aci_tenant" "tenant1" {
-  name        = var.tenant_name
+  name = var.tenant_name
 }
 
 data "aci_cloud_cidr_pool" "vnet_aks_cidr" {

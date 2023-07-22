@@ -38,9 +38,13 @@ variable "vnet_aks_subnets" {
     ip   = string
   }))
   default = {
-    subnet1 = {
+    aks-subnet = {
       name = "aks-subnet"
       ip   = "40.100.0.0/21"
+    }
+    consumer-subnet = {
+      name = "consumer-subnet"
+      ip   = "40.100.8.0/24"
     }
   }
 }

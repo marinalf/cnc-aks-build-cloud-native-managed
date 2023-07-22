@@ -15,11 +15,13 @@ This is a sample terraform code to automate networking and policies for AKS with
 
 ### High Level Steps
 
-1. Deploy VNet networking for AKS **(1 - vnet-networking)**
-2. Deploy VNet policies for AKS **(2 - vnet-policies)**
-3. Define a Service EPG with Cloud Native Managed type (pending resource)
-4. Associate Service EPG as provider with internet-access contract
-5. Deploy AKS **(3 - aks-build)**
+1. Review variables to match deployment (region, subscription, credentials)
+2. Deploy VNet networking for AKS **(1 - vnet-networking)**
+3. Deploy VNet policies for AKS **(2 - vnet-policies)**
+4. Define a Service EPG with Cloud Native Managed type (pending resource)
+5. Assign Service EPG as provider in the internal-access contract workflow
+6. Deploy AKS **(3 - aks-build)**
+7. Assign "my-aks" service with Contributor role in the VNet Resource Group managed by CNC 
 
 ### Verify AKS Cluster Status
 
@@ -31,4 +33,4 @@ kubectl get nodes -o wide
 ```
 ### Deploy Sample App
 
-1. Deploy guestbook app **(3 - aks-build/guestbook-app)**
+1. Deploy guestbook app per guidelines on **(3 - aks-build/guestbook-app-sample)**

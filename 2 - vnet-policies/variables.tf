@@ -14,18 +14,26 @@ variable "vnet_aks_name" {
   default = "aks"
 }
 
-# AKS Service EPG
-
 variable "aks_ap" {
   default = "aks-ap"
 }
 
-variable "aks_epg_selector" {
-  default = "aks-epg-selector"
+# AKS Consumer EPG + Contract
+
+variable "aks_consumer_epg" {
+  default = "aks-consumer-epg"
+}
+
+variable "aks_consumer_selector" {
+  default = "aks-consumer-epg-selector"
 }
 
 variable "aks_epg_ip_based" {
-  default = "IP=='40.100.0.0/21'"
+  default = "IP=='40.100.8.0/24'"
+}
+
+variable "internal_contract" {
+  default = "aks-internal-access"
 }
 
 # Internet External EPG + Contract
@@ -45,6 +53,8 @@ variable "internet_selector_subnet" {
 variable "internet_contract" {
   default = "aks-internet-access"
 }
+
+# Shared Filter
 
 variable "aks_filter_name" {
   default = "internet-to-aks"

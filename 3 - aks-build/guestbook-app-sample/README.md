@@ -1,5 +1,3 @@
-Source: https://cloud.google.com/kubernetes-engine/docs/tutorials/guestbook
-
 ## High Level Steps
 
 Deploy one .yaml file at a time, or use "kubectl apply -f ." to deploy all
