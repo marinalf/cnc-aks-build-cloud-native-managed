@@ -1,6 +1,6 @@
 ### About <a name = "about"></a>
 
-This is a sample terraform code to automate networking and policies for AKS with [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model.
+This is a sample terraform code to automate networking and policies for AKS with the [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model, demonstrating how to build connectivity to native services. 
 
 ### Prerequisites
 
@@ -20,8 +20,16 @@ This is a sample terraform code to automate networking and policies for AKS with
 3. Deploy VNet policies for AKS **(2 - vnet-policies)**
 4. Define a Service EPG with Cloud Native Managed type (pending resource)
 5. Assign Service EPG as provider in the internal-access contract workflow
-6. Deploy AKS **(3 - aks-build)**
+6. Deploy AKS **(3 - aks-build)** => *using minimal settings for dev/test only*
 7. Assign "my-aks" service with Contributor role in the VNet Resource Group managed by CNC 
+
+#### Usage
+
+```
+terraform init
+terraform plan
+terraform apply
+```
 
 ### Verify AKS Cluster Status
 
@@ -34,3 +42,7 @@ kubectl get nodes -o wide
 ### Deploy Sample App
 
 1. Deploy guestbook app per guidelines on **(3 - aks-build/guestbook-app-sample)**
+
+### Deploy Sample VM
+
+1. Deploy consumer VM **(4 - internal-consumer)**
