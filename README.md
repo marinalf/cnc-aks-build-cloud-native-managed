@@ -2,6 +2,10 @@
 
 This is a sample terraform code to automate networking and policies for AKS with the [Cloud Network Controller](https://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/cloud-network-controller.html) policy model, demonstrating how to build connectivity to native services. 
 
+### High Level Diagram
+
+![High Level Diagram](images/hld.png)
+
 ### Prerequisites
 
 1. CNC First Time setup completed + Tenant
@@ -46,7 +50,3 @@ kubectl get nodes -o wide
 ### Deploy Sample VM
 
 1. Deploy consumer VM **(4 - internal-consumer)**
-
-### High Level Diagram
-
-![High Level Diagram](images/hld.png)
