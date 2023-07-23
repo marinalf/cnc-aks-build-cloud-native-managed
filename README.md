@@ -4,7 +4,7 @@ This is a sample terraform code to automate networking and policies for AKS with
 
 ### Prerequisites
 
-1. CNC First Time setup completed
+1. CNC First Time setup completed + Tenant
 2. Azure and AKS CLI installed
 
 ```
@@ -15,10 +15,10 @@ This is a sample terraform code to automate networking and policies for AKS with
 
 ### High Level Steps
 
-1. Review variables to match deployment (region, subscription, credentials)
+1. Review variables to match deployment (tenant, region, subscription, credentials)
 2. Deploy VNet networking for AKS **(1 - vnet-networking)**
 3. Deploy VNet policies for AKS **(2 - vnet-policies)**
-4. Define a Service EPG with Cloud Native Managed type and select AKS
+4. Define a Service EPG with "Cloud Native Managed" type and select AKS
 5. Assign the Service EPG as provider in the contract workflow for internal-access/internet-access
 6. Deploy AKS **(3 - aks-build)** ==> *using minimal settings for dev/test only*
 7. Assign "my-aks" service with Contributor role in the VNet Resource Group managed by CNC 
@@ -46,3 +46,7 @@ kubectl get nodes -o wide
 ### Deploy Sample VM
 
 1. Deploy consumer VM **(4 - internal-consumer)**
+
+### High Level Diagram
+
+![High Level Diagram](images/hld.png)
