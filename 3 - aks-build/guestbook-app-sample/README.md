@@ -51,7 +51,7 @@ helm ls -A
 2. Deploy ingress route for public access **(guestbook-app-external)**
 
 ```
-kubectl apply -f ingress-route-external.yaml>
+kubectl apply -f ingress-route-external.yaml
 kubectl get services # # Gather "External IP" for testing
 ```
 3. Open any browser to verify access to guest book app using its public IP
