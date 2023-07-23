@@ -9,7 +9,7 @@ This is a sample terraform code to automate networking and policies for AKS with
 ### Prerequisites
 
 1. CNC First Time setup completed + Tenant
-2. Azure and AKS CLI installed
+2. Helm, Azure and AKS CLI installed
 
 ```
  az aks install-cli
