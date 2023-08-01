@@ -25,7 +25,7 @@ This is a sample terraform code to automate networking and policies for AKS with
 4. Define a Service EPG with "Cloud Native Managed" type and select AKS (+ subnet-based selector)
 5. Assign the Service EPG as provider in the contract workflow for internal-access/internet-access
 6. Deploy AKS **(3 - aks-build)** ==> *using minimal settings for dev/test only*
-7. Assign "my-aks" service with Contributor role in the VNet Resource Group managed by CNC 
+7. Assign "my-aks" service and its managed identity with Contributor role in the VNet Resource Group managed by CNC 
 
 #### Usage
 

@@ -8,7 +8,8 @@ For brevity, the same app is being exposed privately and publicly with dedicated
 
 ```
 ./helm.sh
-helm ls -A 
+helm ls -A
+kubectl describe svc ingress-nginx-controller
 ```
 
 2. Deploy sample app **(guestbook-app-internal)** with one .yaml file at a time or "kubectl apply -f ." for all
@@ -45,7 +46,8 @@ azureuser@aks-consumer-vm:~$ curl http://40.100.0.105
 
 ```
 ./helm.sh
-helm ls -A 
+helm ls -A
+kubectl describe svc ingress-nginx-controller
 ```
 
 2. Deploy ingress route for public access **(guestbook-app-external)**
